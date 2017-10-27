@@ -1,0 +1,461 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+static main::{{closure}}::__STATIC_FMTSTR: &[&str] = {
+    let mut _0: &[&str];                 // return pointer
+    let mut _1: &[&str; 3];
+    let mut _2: &[&str; 3];
+    let mut _3: [&str; 3];
+
+    bb0: {
+        _3 = [const "", const ": ", const "\n"]; // scope 0 at <println macros>:3:18: 3:43
+        _2 = &_3;                        // scope 0 at <println macros>:3:18: 3:43
+        _1 = _2;                         // scope 0 at <println macros>:3:18: 3:43
+        _0 = _1 as &[&str] (Unsize);     // scope 0 at <println macros>:3:18: 3:43
+        return;                          // scope 0 at <println macros>:3:18: 3:43
+    }
+}
+
+fn main() -> () {
+    let mut _0: ();                      // return pointer
+    scope 1 {
+        let _1: std::thread::JoinHandle<()>; // "handle" in scope 1 at src/main.rs:6:9: 6:15
+    }
+    let mut _2: std::result::Result<std::thread::JoinHandle<()>, std::io::Error>;
+    let mut _3: std::thread::Builder;
+    let mut _4: std::thread::Builder;
+    let mut _5: std::string::String;
+    let mut _6: &str;
+    let mut _7: &str;
+    let mut _8: [closure@src/main.rs:8:16: 17:10];
+    let mut _9: ();
+    let mut _10: std::result::Result<(), std::boxed::Box<std::any::Any + std::marker::Send>>;
+    let mut _11: std::thread::JoinHandle<()>;
+    let mut _12: bool;
+
+    bb0: {
+        _12 = const false;               // scope 0 at src/main.rs:6:9: 6:15
+        StorageLive(_1);                 // scope 0 at src/main.rs:6:9: 6:15
+        StorageLive(_2);                 // scope 0 at src/main.rs:6:18: 17:11
+        StorageLive(_3);                 // scope 0 at src/main.rs:6:18: 7:34
+        StorageLive(_4);                 // scope 0 at src/main.rs:6:18: 6:40
+        _12 = const true;                // scope 0 at src/main.rs:6:18: 6:40
+        _4 = const std::thread::Builder::new() -> bb1; // scope 0 at src/main.rs:6:18: 6:40
+    }
+
+    bb1: {
+        StorageLive(_5);                 // scope 0 at src/main.rs:7:15: 7:33
+        StorageLive(_6);                 // scope 0 at src/main.rs:7:15: 7:22
+        StorageLive(_7);                 // scope 0 at src/main.rs:7:15: 7:22
+        _7 = const "other";              // scope 0 at src/main.rs:7:15: 7:22
+        _6 = _7;                         // scope 0 at src/main.rs:7:15: 7:22
+        _5 = const std::borrow::ToOwned::to_owned(_6) -> [return: bb2, unwind: bb4]; // scope 0 at src/main.rs:7:15: 7:33
+    }
+
+    bb2: {
+        StorageDead(_6);                 // scope 0 at src/main.rs:7:33: 7:33
+        nop;                             // scope 0 at src/main.rs:7:15: 7:33
+        _12 = const false;               // scope 0 at src/main.rs:6:18: 7:34
+        _3 = const std::thread::Builder::name(_4, _5) -> [return: bb5, unwind: bb11]; // scope 0 at src/main.rs:6:18: 7:34
+    }
+
+    bb3: {
+        resume;                          // scope 0 at src/main.rs:5:1: 24:2
+    }
+
+    bb4: {
+        nop;                             // scope 0 at src/main.rs:7:15: 7:33
+        goto -> bb11;                    // scope 0 at src/main.rs:7:15: 7:33
+    }
+
+    bb5: {
+        StorageDead(_5);                 // scope 0 at src/main.rs:7:34: 7:34
+        StorageDead(_4);                 // scope 0 at src/main.rs:7:34: 7:34
+        StorageLive(_8);                 // scope 0 at src/main.rs:8:16: 17:10
+        _8 = [closure@src/main.rs:8:16: 17:10]; // scope 0 at src/main.rs:8:16: 17:10
+        _2 = const std::thread::Builder::spawn(_3, _8) -> bb6; // scope 0 at src/main.rs:6:18: 17:11
+    }
+
+    bb6: {
+        StorageDead(_8);                 // scope 0 at src/main.rs:17:11: 17:11
+        StorageDead(_3);                 // scope 0 at src/main.rs:17:11: 17:11
+        _1 = const <std::result::Result<T, E>>::unwrap(_2) -> bb7; // scope 0 at src/main.rs:6:18: 18:18
+    }
+
+    bb7: {
+        StorageDead(_2);                 // scope 0 at src/main.rs:18:18: 18:18
+        StorageDead(_7);                 // scope 0 at src/main.rs:18:19: 18:19
+        StorageLive(_10);                // scope 1 at src/main.rs:23:5: 23:18
+        StorageLive(_11);                // scope 1 at src/main.rs:23:5: 23:11
+        _11 = _1;                        // scope 1 at src/main.rs:23:5: 23:11
+        _10 = const <std::thread::JoinHandle<T>>::join(_11) -> bb8; // scope 1 at src/main.rs:23:5: 23:18
+    }
+
+    bb8: {
+        StorageDead(_11);                // scope 1 at src/main.rs:23:18: 23:18
+        _9 = const <std::result::Result<T, E>>::unwrap(_10) -> bb9; // scope 1 at src/main.rs:23:5: 23:27
+    }
+
+    bb9: {
+        StorageDead(_10);                // scope 1 at src/main.rs:23:27: 23:27
+        _0 = ();                         // scope 0 at src/main.rs:5:11: 24:2
+        StorageDead(_1);                 // scope 0 at src/main.rs:24:2: 24:2
+        return;                          // scope 0 at src/main.rs:24:2: 24:2
+    }
+
+    bb10: {
+        _12 = const false;               // scope 0 at src/main.rs:7:34: 7:34
+        drop(_4) -> bb3;                 // scope 0 at src/main.rs:7:34: 7:34
+    }
+
+    bb11: {
+        switchInt(_12) -> [0u8: bb3, otherwise: bb10]; // scope 0 at src/main.rs:7:34: 7:34
+    }
+}
+
+const crazy::{{initializer}}: usize = {
+    let mut _0: usize;                   // return pointer
+
+    bb0: {
+        _0 = crazy::SIZE;                // scope 0 at src/main.rs:36:38: 36:42
+        return;                          // scope 0 at src/main.rs:36:38: 36:42
+    }
+}
+
+fn main::{{closure}}(_1: [closure@src/main.rs:8:16: 17:10]) -> () {
+    let mut _0: ();                      // return pointer
+    scope 1 {
+        let _12: &&str;                  // "__arg0" in scope 1 at src/main.rs:1:1: 1:1
+        let _13: &usize;                 // "__arg1" in scope 1 at src/main.rs:1:1: 1:1
+    }
+    let mut _2: ();
+    let mut _3: std::fmt::Arguments;
+    let mut _4: &[&str];
+    let mut _5: &[std::fmt::ArgumentV1];
+    let mut _6: &[std::fmt::ArgumentV1; 2];
+    let mut _7: &[std::fmt::ArgumentV1; 2];
+    let mut _8: [std::fmt::ArgumentV1; 2];
+    let mut _9: (&&str, &usize);
+    let mut _10: &&str;
+    let mut _11: &usize;
+    let mut _14: std::fmt::ArgumentV1;
+    let mut _15: &&str;
+    let mut _16: fn(&&str, &mut std::fmt::Formatter<'_>) -> std::result::Result<(), std::fmt::Error>;
+    let mut _17: std::fmt::ArgumentV1;
+    let mut _18: &usize;
+    let mut _19: fn(&usize, &mut std::fmt::Formatter<'_>) -> std::result::Result<(), std::fmt::Error>;
+
+    bb0: {
+        StorageLive(_3);                 // scope 0 at <print macros>:2:27: 2:58
+        StorageLive(_4);                 // scope 0 at <println macros>:3:18: 3:43
+        _4 = (main::{{closure}}::__STATIC_FMTSTR: &[&str]); // scope 0 at <println macros>:3:18: 3:43
+        StorageLive(_5);                 // scope 0 at <println macros>:3:18: 3:43
+        StorageLive(_6);                 // scope 0 at <println macros>:3:18: 3:43
+        StorageLive(_7);                 // scope 0 at <println macros>:3:18: 3:43
+        StorageLive(_8);                 // scope 0 at <println macros>:3:18: 3:43
+        StorageLive(_9);                 // scope 0 at <println macros>:3:18: 3:43
+        StorageLive(_10);                // scope 0 at src/main.rs:11:17: 11:46
+        _10 = promoted1;                 // scope 0 at src/main.rs:11:17: 11:46
+        StorageLive(_11);                // scope 0 at src/main.rs:12:17: 12:40
+        _11 = promoted0;                 // scope 0 at src/main.rs:12:17: 12:40
+        _9 = (_10, _11);                 // scope 0 at <println macros>:3:18: 3:43
+        StorageDead(_11);                // scope 0 at <println macros>:3:43: 3:43
+        StorageDead(_10);                // scope 0 at <println macros>:3:43: 3:43
+        StorageLive(_12);                // scope 0 at src/main.rs:1:1: 1:1
+        _12 = (_9.0: &&str);             // scope 0 at src/main.rs:1:1: 1:1
+        StorageLive(_13);                // scope 0 at src/main.rs:1:1: 1:1
+        _13 = (_9.1: &usize);            // scope 0 at src/main.rs:1:1: 1:1
+        StorageLive(_14);                // scope 1 at <print macros>:2:27: 2:58
+        StorageLive(_15);                // scope 1 at src/main.rs:11:17: 11:46
+        _15 = _12;                       // scope 1 at src/main.rs:11:17: 11:46
+        StorageLive(_16);                // scope 1 at src/main.rs:11:17: 11:46
+        _16 = const std::fmt::Display::fmt as fn(&&str, &mut std::fmt::Formatter<'_>) -> std::result::Result<(), std::fmt::Error> (ReifyFnPointer); // scope 1 at src/main.rs:11:17: 11:46
+        _14 = const std::fmt::ArgumentV1::new(_15, _16) -> bb1; // scope 1 at <print macros>:2:27: 2:58
+    }
+
+    bb1: {
+        StorageDead(_16);                // scope 1 at <print macros>:2:58: 2:58
+        StorageDead(_15);                // scope 1 at <print macros>:2:58: 2:58
+        nop;                             // scope 1 at <print macros>:2:27: 2:58
+        StorageLive(_17);                // scope 1 at <print macros>:2:27: 2:58
+        StorageLive(_18);                // scope 1 at src/main.rs:12:17: 12:40
+        _18 = _13;                       // scope 1 at src/main.rs:12:17: 12:40
+        StorageLive(_19);                // scope 1 at src/main.rs:12:17: 12:40
+        _19 = const std::fmt::Display::fmt as fn(&usize, &mut std::fmt::Formatter<'_>) -> std::result::Result<(), std::fmt::Error> (ReifyFnPointer); // scope 1 at src/main.rs:12:17: 12:40
+        _17 = const std::fmt::ArgumentV1::new(_18, _19) -> bb2; // scope 1 at <print macros>:2:27: 2:58
+    }
+
+    bb2: {
+        StorageDead(_19);                // scope 1 at <print macros>:2:58: 2:58
+        StorageDead(_18);                // scope 1 at <print macros>:2:58: 2:58
+        _8 = [_14, _17];                 // scope 1 at <println macros>:3:18: 3:43
+        StorageDead(_17);                // scope 1 at <println macros>:3:43: 3:43
+        StorageDead(_14);                // scope 1 at <println macros>:3:43: 3:43
+        StorageDead(_13);                // scope 0 at <println macros>:3:43: 3:43
+        StorageDead(_12);                // scope 0 at <println macros>:3:43: 3:43
+        _7 = &_8;                        // scope 0 at <println macros>:3:18: 3:43
+        _6 = _7;                         // scope 0 at <println macros>:3:18: 3:43
+        _5 = _6 as &[std::fmt::ArgumentV1] (Unsize); // scope 0 at <println macros>:3:18: 3:43
+        StorageDead(_6);                 // scope 0 at <println macros>:3:43: 3:43
+        _3 = const std::fmt::Arguments::new_v1(_4, _5) -> bb3; // scope 0 at <print macros>:2:27: 2:58
+    }
+
+    bb3: {
+        StorageDead(_5);                 // scope 0 at <print macros>:2:58: 2:58
+        StorageDead(_4);                 // scope 0 at <print macros>:2:58: 2:58
+        _2 = const std::io::_print(_3) -> bb4; // scope 0 at <print macros>:2:1: 2:60
+    }
+
+    bb4: {
+        StorageDead(_3);                 // scope 0 at <print macros>:2:60: 2:60
+        nop;                             // scope 0 at <print macros>:2:1: 2:60
+        StorageDead(_7);                 // scope 0 at <print macros>:2:60: 2:60
+        StorageDead(_8);                 // scope 0 at <print macros>:2:60: 2:60
+        StorageDead(_9);                 // scope 0 at <print macros>:2:60: 2:60
+        _0 = ();                         // scope 0 at src/main.rs:8:19: 17:10
+        return;                          // scope 0 at src/main.rs:17:10: 17:10
+    }
+}
+
+promoted0 in main::{{closure}}: &usize = {
+    let mut _0: &usize;                  // return pointer
+    let mut _1: usize;
+
+    bb0: {
+        _1 = libc::PTHREAD_STACK_MIN;    // scope 0 at src/main.rs:12:17: 12:40
+        _0 = &_1;                        // scope 0 at src/main.rs:12:17: 12:40
+        return;                          // scope 0 at src/main.rs:12:17: 12:40
+    }
+}
+
+promoted1 in main::{{closure}}: &&'static str = {
+    let mut _0: &&'static str;           // return pointer
+    let mut _1: &'static str;
+
+    bb0: {
+        _1 = const "PTHREAD_STACK_MIN";  // scope 0 at src/main.rs:11:17: 11:46
+        _0 = &_1;                        // scope 0 at src/main.rs:11:17: 11:46
+        return;                          // scope 0 at src/main.rs:11:17: 11:46
+    }
+}
+
+const crazy::SIZE: usize = {
+    let mut _0: usize;                   // return pointer
+
+    bb0: {
+        _0 = const 1000usize;            // scope 0 at src/main.rs:29:25: 29:29
+        return;                          // scope 0 at src/main.rs:29:5: 29:30
+    }
+}
+
+const crazy::{{initializer}}: usize = {
+    let mut _0: usize;                   // return pointer
+
+    bb0: {
+        _0 = crazy::SIZE;                // scope 0 at src/main.rs:36:26: 36:30
+        return;                          // scope 0 at src/main.rs:36:26: 36:30
+    }
+}
+
+static crazy::__STATIC_FMTSTR: &[&str] = {
+    let mut _0: &[&str];                 // return pointer
+    let mut _1: &[&str; 2];
+    let mut _2: &[&str; 2];
+    let mut _3: [&str; 2];
+
+    bb0: {
+        _3 = [const "level: ", const "\n"]; // scope 0 at <println macros>:3:18: 3:43
+        _2 = &_3;                        // scope 0 at <println macros>:3:18: 3:43
+        _1 = _2;                         // scope 0 at <println macros>:3:18: 3:43
+        _0 = _1 as &[&str] (Unsize);     // scope 0 at <println macros>:3:18: 3:43
+        return;                          // scope 0 at <println macros>:3:18: 3:43
+    }
+}
+
+fn crazy(_1: usize, _2: &mut [u8]) -> () {
+    let mut _0: ();                      // return pointer
+    scope 1 {
+        let _3: usize;                   // "level" in scope 1 at src/main.rs:28:10: 28:15
+        let _4: &mut [u8];               // "kb" in scope 1 at src/main.rs:28:24: 28:26
+        scope 2 {
+            let _9: usize;               // "len" in scope 2 at src/main.rs:32:13: 32:16
+        }
+        scope 3 {
+            let _26: &usize;             // "__arg0" in scope 3 at src/main.rs:1:1: 1:1
+        }
+        scope 4 {
+            let mut _30: [u8; 1000];     // "one_kb" in scope 4 at src/main.rs:36:9: 36:19
+        }
+    }
+    let mut _5: ();
+    let mut _6: bool;
+    let mut _7: usize;
+    let mut _8: &[u8];
+    let mut _10: &[u8];
+    let mut _11: usize;
+    let mut _12: &mut u8;
+    let mut _13: &mut [u8];
+    let mut _14: usize;
+    let mut _15: usize;
+    let mut _16: bool;
+    let mut _17: ();
+    let mut _18: std::fmt::Arguments;
+    let mut _19: &[&str];
+    let mut _20: &[std::fmt::ArgumentV1];
+    let mut _21: &[std::fmt::ArgumentV1; 1];
+    let mut _22: &[std::fmt::ArgumentV1; 1];
+    let mut _23: [std::fmt::ArgumentV1; 1];
+    let mut _24: (&usize,);
+    let mut _25: &usize;
+    let mut _27: std::fmt::ArgumentV1;
+    let mut _28: &usize;
+    let mut _29: fn(&usize, &mut std::fmt::Formatter<'_>) -> std::result::Result<(), std::fmt::Error>;
+    let mut _31: ();
+    let mut _32: usize;
+    let mut _33: usize;
+    let mut _34: &mut [u8];
+    let mut _35: &mut [u8; 1000];
+    let mut _36: &mut [u8; 1000];
+
+    bb0: {
+        StorageLive(_3);                 // scope 0 at src/main.rs:28:10: 28:15
+        _3 = _1;                         // scope 0 at src/main.rs:28:10: 28:15
+        StorageLive(_4);                 // scope 0 at src/main.rs:28:24: 28:26
+        _4 = _2;                         // scope 0 at src/main.rs:28:24: 28:26
+        StorageLive(_6);                 // scope 1 at src/main.rs:31:8: 31:20
+        StorageLive(_7);                 // scope 1 at src/main.rs:31:8: 31:16
+        StorageLive(_8);                 // scope 1 at src/main.rs:31:8: 31:10
+        _8 = _4;                         // scope 1 at src/main.rs:31:8: 31:10
+        _7 = const std::slice::<impl [T]>::len(_8) -> bb1; // scope 1 at src/main.rs:31:8: 31:16
+    }
+
+    bb1: {
+        StorageDead(_8);                 // scope 1 at src/main.rs:31:16: 31:16
+        nop;                             // scope 1 at src/main.rs:31:8: 31:16
+        _6 = Gt(_7, const 0usize);       // scope 1 at src/main.rs:31:8: 31:20
+        StorageDead(_7);                 // scope 1 at src/main.rs:31:20: 31:20
+        switchInt(_6) -> [0u8: bb3, otherwise: bb2]; // scope 1 at src/main.rs:31:5: 34:6
+    }
+
+    bb2: {
+        StorageLive(_9);                 // scope 1 at src/main.rs:32:13: 32:16
+        StorageLive(_10);                // scope 1 at src/main.rs:32:19: 32:21
+        _10 = _4;                        // scope 1 at src/main.rs:32:19: 32:21
+        _9 = const std::slice::<impl [T]>::len(_10) -> bb4; // scope 1 at src/main.rs:32:19: 32:27
+    }
+
+    bb3: {
+        _5 = ();                         // scope 1 at src/main.rs:31:5: 34:6
+        goto -> bb7;                     // scope 1 at src/main.rs:31:5: 34:6
+    }
+
+    bb4: {
+        StorageDead(_10);                // scope 1 at src/main.rs:32:27: 32:27
+        nop;                             // scope 1 at src/main.rs:32:19: 32:27
+        StorageLive(_11);                // scope 2 at src/main.rs:33:23: 33:28
+        _11 = _3;                        // scope 2 at src/main.rs:33:23: 33:28
+        StorageLive(_12);                // scope 2 at src/main.rs:33:9: 33:20
+        StorageLive(_13);                // scope 2 at src/main.rs:33:9: 33:11
+        _13 = _4;                        // scope 2 at src/main.rs:33:9: 33:11
+        StorageLive(_14);                // scope 2 at src/main.rs:33:12: 33:19
+        StorageLive(_15);                // scope 2 at src/main.rs:33:12: 33:15
+        _15 = _9;                        // scope 2 at src/main.rs:33:12: 33:15
+        _16 = Eq(const 2usize, const 0usize); // scope 2 at src/main.rs:33:12: 33:19
+        assert(!_16, "attempt to divide by zero") -> bb5; // scope 2 at src/main.rs:33:12: 33:19
+    }
+
+    bb5: {
+        _14 = Div(_15, const 2usize);    // scope 2 at src/main.rs:33:12: 33:19
+        StorageDead(_15);                // scope 2 at src/main.rs:33:19: 33:19
+        _12 = const std::ops::IndexMut::index_mut(_13, _14) -> bb6; // scope 2 at src/main.rs:33:9: 33:20
+    }
+
+    bb6: {
+        StorageDead(_14);                // scope 2 at src/main.rs:33:20: 33:20
+        StorageDead(_13);                // scope 2 at src/main.rs:33:20: 33:20
+        nop;                             // scope 2 at src/main.rs:33:9: 33:20
+        (*_12) = _11 as u8 (Misc);       // scope 2 at src/main.rs:33:9: 33:34
+        StorageDead(_11);                // scope 2 at src/main.rs:33:34: 33:34
+        StorageDead(_12);                // scope 2 at src/main.rs:33:35: 33:35
+        _5 = ();                         // scope 1 at src/main.rs:31:21: 34:6
+        StorageDead(_9);                 // scope 1 at src/main.rs:34:6: 34:6
+        goto -> bb7;                     // scope 1 at src/main.rs:31:5: 34:6
+    }
+
+    bb7: {
+        StorageDead(_6);                 // scope 1 at src/main.rs:34:6: 34:6
+        StorageLive(_18);                // scope 1 at <print macros>:2:27: 2:58
+        StorageLive(_19);                // scope 1 at <println macros>:3:18: 3:43
+        _19 = (crazy::__STATIC_FMTSTR: &[&str]); // scope 1 at <println macros>:3:18: 3:43
+        StorageLive(_20);                // scope 1 at <println macros>:3:18: 3:43
+        StorageLive(_21);                // scope 1 at <println macros>:3:18: 3:43
+        StorageLive(_22);                // scope 1 at <println macros>:3:18: 3:43
+        StorageLive(_23);                // scope 1 at <println macros>:3:18: 3:43
+        StorageLive(_24);                // scope 1 at <println macros>:3:18: 3:43
+        StorageLive(_25);                // scope 1 at src/main.rs:35:27: 35:32
+        _25 = &_3;                       // scope 1 at src/main.rs:35:27: 35:32
+        _24 = (_25,);                    // scope 1 at <println macros>:3:18: 3:43
+        StorageDead(_25);                // scope 1 at <println macros>:3:43: 3:43
+        StorageLive(_26);                // scope 1 at src/main.rs:1:1: 1:1
+        _26 = (_24.0: &usize);           // scope 1 at src/main.rs:1:1: 1:1
+        StorageLive(_27);                // scope 3 at <print macros>:2:27: 2:58
+        StorageLive(_28);                // scope 3 at src/main.rs:35:27: 35:32
+        _28 = _26;                       // scope 3 at src/main.rs:35:27: 35:32
+        StorageLive(_29);                // scope 3 at src/main.rs:35:27: 35:32
+        _29 = const std::fmt::Display::fmt as fn(&usize, &mut std::fmt::Formatter<'_>) -> std::result::Result<(), std::fmt::Error> (ReifyFnPointer); // scope 3 at src/main.rs:35:27: 35:32
+        _27 = const std::fmt::ArgumentV1::new(_28, _29) -> bb8; // scope 3 at <print macros>:2:27: 2:58
+    }
+
+    bb8: {
+        StorageDead(_29);                // scope 3 at <print macros>:2:58: 2:58
+        StorageDead(_28);                // scope 3 at <print macros>:2:58: 2:58
+        _23 = [_27];                     // scope 3 at <println macros>:3:18: 3:43
+        StorageDead(_27);                // scope 3 at <println macros>:3:43: 3:43
+        StorageDead(_26);                // scope 1 at <println macros>:3:43: 3:43
+        _22 = &_23;                      // scope 1 at <println macros>:3:18: 3:43
+        _21 = _22;                       // scope 1 at <println macros>:3:18: 3:43
+        _20 = _21 as &[std::fmt::ArgumentV1] (Unsize); // scope 1 at <println macros>:3:18: 3:43
+        StorageDead(_21);                // scope 1 at <println macros>:3:43: 3:43
+        _18 = const std::fmt::Arguments::new_v1(_19, _20) -> bb9; // scope 1 at <print macros>:2:27: 2:58
+    }
+
+    bb9: {
+        StorageDead(_20);                // scope 1 at <print macros>:2:58: 2:58
+        StorageDead(_19);                // scope 1 at <print macros>:2:58: 2:58
+        _17 = const std::io::_print(_18) -> bb10; // scope 1 at <print macros>:2:1: 2:60
+    }
+
+    bb10: {
+        StorageDead(_18);                // scope 1 at <print macros>:2:60: 2:60
+        nop;                             // scope 1 at <print macros>:2:1: 2:60
+        StorageDead(_22);                // scope 1 at <print macros>:2:60: 2:60
+        StorageDead(_23);                // scope 1 at <print macros>:2:60: 2:60
+        StorageDead(_24);                // scope 1 at <print macros>:2:60: 2:60
+        StorageLive(_30);                // scope 1 at src/main.rs:36:9: 36:19
+        _30 = [const 0u8; Us64(1000)];   // scope 1 at src/main.rs:36:34: 36:43
+        StorageLive(_32);                // scope 4 at src/main.rs:37:11: 37:20
+        StorageLive(_33);                // scope 4 at src/main.rs:37:11: 37:16
+        _33 = _3;                        // scope 4 at src/main.rs:37:11: 37:16
+        _32 = Add(_33, const 1usize);    // scope 4 at src/main.rs:37:11: 37:20
+        StorageDead(_33);                // scope 4 at src/main.rs:37:20: 37:20
+        StorageLive(_34);                // scope 4 at src/main.rs:37:22: 37:33
+        StorageLive(_35);                // scope 4 at src/main.rs:37:22: 37:33
+        StorageLive(_36);                // scope 4 at src/main.rs:37:22: 37:33
+        _36 = &mut _30;                  // scope 4 at src/main.rs:37:22: 37:33
+        _35 = _36;                       // scope 4 at src/main.rs:37:22: 37:33
+        _34 = _35 as &mut [u8] (Unsize); // scope 4 at src/main.rs:37:22: 37:33
+        StorageDead(_35);                // scope 4 at src/main.rs:37:33: 37:33
+        _31 = const crazy(_32, _34) -> bb11; // scope 4 at src/main.rs:37:5: 37:34
+    }
+
+    bb11: {
+        StorageDead(_34);                // scope 4 at src/main.rs:37:34: 37:34
+        StorageDead(_32);                // scope 4 at src/main.rs:37:34: 37:34
+        nop;                             // scope 4 at src/main.rs:37:5: 37:34
+        StorageDead(_36);                // scope 4 at src/main.rs:37:35: 37:35
+        _0 = ();                         // scope 1 at src/main.rs:28:39: 38:2
+        StorageDead(_30);                // scope 1 at src/main.rs:38:2: 38:2
+        StorageDead(_4);                 // scope 0 at src/main.rs:38:2: 38:2
+        StorageDead(_3);                 // scope 0 at src/main.rs:38:2: 38:2
+        return;                          // scope 1 at src/main.rs:38:2: 38:2
+    }
+}
