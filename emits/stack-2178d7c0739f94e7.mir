@@ -143,6 +143,10 @@ fn main::{{closure}}(_1: [closure@src/main.rs:8:16: 17:10]) -> () {
     let mut _17: std::fmt::ArgumentV1;
     let mut _18: &usize;
     let mut _19: fn(&usize, &mut std::fmt::Formatter<'_>) -> std::result::Result<(), std::fmt::Error>;
+    let mut _20: ();
+    let mut _21: &mut [u8];
+    let mut _22: &mut [u8; 0];
+    let mut _23: &mut [u8; 0];
 
     bb0: {
         StorageLive(_3);                 // scope 0 at <print macros>:2:27: 2:58
@@ -154,9 +158,9 @@ fn main::{{closure}}(_1: [closure@src/main.rs:8:16: 17:10]) -> () {
         StorageLive(_8);                 // scope 0 at <println macros>:3:18: 3:43
         StorageLive(_9);                 // scope 0 at <println macros>:3:18: 3:43
         StorageLive(_10);                // scope 0 at src/main.rs:11:17: 11:46
-        _10 = promoted1;                 // scope 0 at src/main.rs:11:17: 11:46
+        _10 = promoted2;                 // scope 0 at src/main.rs:11:17: 11:46
         StorageLive(_11);                // scope 0 at src/main.rs:12:17: 12:40
-        _11 = promoted0;                 // scope 0 at src/main.rs:12:17: 12:40
+        _11 = promoted1;                 // scope 0 at src/main.rs:12:17: 12:40
         _9 = (_10, _11);                 // scope 0 at <println macros>:3:18: 3:43
         StorageDead(_11);                // scope 0 at <println macros>:3:43: 3:43
         StorageDead(_10);                // scope 0 at <println macros>:3:43: 3:43
@@ -211,12 +215,37 @@ fn main::{{closure}}(_1: [closure@src/main.rs:8:16: 17:10]) -> () {
         StorageDead(_7);                 // scope 0 at <print macros>:2:60: 2:60
         StorageDead(_8);                 // scope 0 at <print macros>:2:60: 2:60
         StorageDead(_9);                 // scope 0 at <print macros>:2:60: 2:60
+        StorageLive(_21);                // scope 0 at src/main.rs:16:22: 16:29
+        StorageLive(_22);                // scope 0 at src/main.rs:16:22: 16:29
+        StorageLive(_23);                // scope 0 at src/main.rs:16:22: 16:29
+        _23 = promoted0;                 // scope 0 at src/main.rs:16:22: 16:29
+        _22 = _23;                       // scope 0 at src/main.rs:16:22: 16:29
+        _21 = _22 as &mut [u8] (Unsize); // scope 0 at src/main.rs:16:22: 16:29
+        StorageDead(_22);                // scope 0 at src/main.rs:16:29: 16:29
+        _20 = const crazy(const 0usize, _21) -> bb5; // scope 0 at src/main.rs:16:13: 16:30
+    }
+
+    bb5: {
+        StorageDead(_21);                // scope 0 at src/main.rs:16:30: 16:30
+        nop;                             // scope 0 at src/main.rs:16:13: 16:30
+        StorageDead(_23);                // scope 0 at src/main.rs:16:31: 16:31
         _0 = ();                         // scope 0 at src/main.rs:8:19: 17:10
         return;                          // scope 0 at src/main.rs:17:10: 17:10
     }
 }
 
-promoted0 in main::{{closure}}: &usize = {
+promoted0 in main::{{closure}}: &mut [u8; 0] = {
+    let mut _0: &mut [u8; 0];            // return pointer
+    let mut _1: [u8; 0];
+
+    bb0: {
+        _1 = [];                         // scope 0 at src/main.rs:16:27: 16:29
+        _0 = &mut _1;                    // scope 0 at src/main.rs:16:22: 16:29
+        return;                          // scope 0 at src/main.rs:16:22: 16:29
+    }
+}
+
+promoted1 in main::{{closure}}: &usize = {
     let mut _0: &usize;                  // return pointer
     let mut _1: usize;
 
@@ -227,7 +256,7 @@ promoted0 in main::{{closure}}: &usize = {
     }
 }
 
-promoted1 in main::{{closure}}: &&'static str = {
+promoted2 in main::{{closure}}: &&'static str = {
     let mut _0: &&'static str;           // return pointer
     let mut _1: &'static str;
 
