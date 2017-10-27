@@ -1,0 +1,11 @@
+[package]
+name = "stack"
+version = "0.1.0"
+authors = ["Neil Shen <overvenus@gmail.com>"]
+
+[dependencies]
+libc = "0.2"
+
+[features]
+main-stackoverflow = []
+other-stackoverflow = []
